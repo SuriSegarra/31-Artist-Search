@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Home = ({ name, onChange, onSubmit }) => 
+const Artist = ({ name, onChange, onSubmit }) => 
   (
     <>
       <h2>  Search Your Artist </h2>
@@ -13,12 +13,12 @@ const Home = ({ name, onChange, onSubmit }) =>
       <button onSubmit={onSubmit}>Search</button>
     </>
   );
-Home.propTypes = {
+Artist.propTypes = {
   name: PropTypes.string.isRequired,
   onChange: PropTypes.string.isRequired,
   onSubmit: PropTypes.string.isRequired
 };
 
-export default Home;
+export default Artist;
 
 
