@@ -1,13 +1,16 @@
 import React from 'react';
 import Artist from '../Artist/Artist';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
-const Artists = ({ artists }) => {
+const ArtistsList = ({ artists }) => {
   const artistsList = artists.map(artist => (
-    <li key={artist.id}>
-      <Artist {...artist}/>
-    </li>
+    <Link key={artist.id} to={`/artist/${artist.id}`}>
+      <li>
+        <Artist {...artist}/>
+      </li>
+    </Link>
   ));
   return (
     <ul>
@@ -16,7 +19,7 @@ const Artists = ({ artists }) => {
   );
 };
 
-Artist.propTypes = {
+ArtistsList.propTypes = {
   artists: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
@@ -24,5 +27,5 @@ Artist.propTypes = {
     
 };
 
-export default Artists;
+export default ArtistsList;
 

@@ -1,24 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Artist = ({ name, onChange, onSubmit }) => 
-  (
+const Artist = ({ name }) => {
+  return (
+
     <>
-      <h2>  Search Your Artist </h2>
-      <input
-        type='search'
-        name={name}
-        value={name}
-        onChange={onChange}/>
-      <button onSubmit={onSubmit}>Search</button>
+      <h2>{name}</h2>
     </>
   );
+};
 Artist.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.string.isRequired,
-  onSubmit: PropTypes.string.isRequired
 };
 
 export default Artist;
+
+
 
 
