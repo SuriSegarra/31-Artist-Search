@@ -1,14 +1,16 @@
 import React from 'react';
 // import ArtistsViewer from '../../Containers/ArtistsViewer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import finedArtists from '../../Containers/ArtistsViewer';
+import findedArtist from '../../Containers/ArtistsViewer';
+import Releases from '../../Containers/AlbumViewer';
 
 export default function App() {
   return (
     <>
       <Router>
         <Switch>
-          <Route exact path='/' component={finedArtists}/>
+          <Route exact path='/' component={findedArtist}/>
+          <Route exact path='/artist/:id' component={Releases}/>
         </Switch>
       </Router>
     
