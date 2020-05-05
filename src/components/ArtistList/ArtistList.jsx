@@ -2,7 +2,6 @@ import React from 'react';
 import Artist from '../Artist/Artist';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 const ArtistsList = ({ artists }) => {
   const artistsList = artists.map(artist => (
