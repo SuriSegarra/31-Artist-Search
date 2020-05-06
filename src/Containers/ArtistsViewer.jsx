@@ -1,7 +1,7 @@
 import React, {  useState } from 'react';
-import Artists from '../components/ArtistList/ArtistList';
+import Artists from '../Song/ArtistList/ArtistList';
 import { fetchArtist } from '../services/artists';
-import Search from '../components/Search/Search';
+import Search from '../Song/Search/Search';
 
 const ArtistsViewer = () => {
   const [artists, setArtists] = useState([]);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Albums from '../components/AlbumList/AlbumList';
+import Albums from '../Song/AlbumList/AlbumList';
 import { fetchRelease } from '../services/fetchAlbum';
 
 const AlbumViewer = ({ match }) => {
