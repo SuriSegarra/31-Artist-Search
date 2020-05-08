@@ -1,15 +1,16 @@
 import React from 'react';
-import Recording from '../Recording/Recording';
+import Song from '../Recording/Song';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const SongList = ({ songs }) => {
   const songElement = songs.map(song => (
-    <Link key={song.id} to={`release/${song.id}`}>
+    <Link key={song.id} to={`/song/${song.id}`}>
       <li>
-        <Recording {...song}/>
+        <Song {...song}/>
       </li>
     </Link>
+   
   ));
   return (
     <ul>

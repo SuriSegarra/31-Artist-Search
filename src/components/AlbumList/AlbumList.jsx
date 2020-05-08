@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const AlbumList = ({ releases }) => {
   const albumList = releases.map(release => (
-    <Link key={release.id} to={`/artist${release.id}`}>
+    <Link key={release.id} to={`/song/${release.id}`}>
       <img src={`http://coverartarchive.org/release/${release.id}/front-250`}/>
       <li>
         <Album {...release}/>
