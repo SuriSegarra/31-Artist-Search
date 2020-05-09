@@ -2,19 +2,23 @@ import React from 'react';
 import Artist from '../Artist/Artist';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './ArtistList.css';
 
 const ArtistsList = ({ artists, artistsName }) => {
   const artistsList = artists.map(artist => (
-    <Link key={artist.id} to={`/artist/${artistsName}/${artist.id}`}>
+    <Link className={styles.textlink} key={artist.id} to={`/artist/${artistsName}/${artist.id}`}>
       <li>
         <Artist {...artist}/>
       </li>
     </Link>
   ));
   return (
-    <ul>
-      {artistsList}
-    </ul>
+    <div>
+      <h1> Artists</h1>
+      <ul className={styles.List} >
+        {artistsList}
+      </ul>
+    </div>
   );
 };
 

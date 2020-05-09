@@ -1,0 +1,17 @@
+.List {
+    li {
+        color: white;
+        list-style: none;
+    }
+    
+    .textlink {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+ h1 {
+    color: white;
+    margin-bottom: 33px;
+    margin-top: 33px;
+    font-size: 40px;
+ }
