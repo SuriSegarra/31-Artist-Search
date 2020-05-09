@@ -13,7 +13,8 @@ const SongViewer = ({ match }) => {
 
   return (
     <>
-      <Songs songs={songs}/>
+      <Songs songs={songs} 
+        match={match}/>
     </>
   );
 };

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
-const AlbumList = ({ releases }) => {
+const AlbumList = ({ releases, artist }) => {
   const albumList = releases.map(release => (
-    <Link key={release.id} to={`/song/${release.id}`}>
+    <Link key={release.id} to={`/song/${artist}/${release.id}`}>
       <img src={`http://coverartarchive.org/release/${release.id}/front-250`}/>
       <li>
         <Album {...release}/>
@@ -21,14 +21,13 @@ const AlbumList = ({ releases }) => {
   );
 };
 
-
-
 AlbumList.propTypes = {
   releases: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date:PropTypes.string.isRequired
-  })).isRequired
+  })).isRequired,
+  artist: PropTypes.string.isRequired
 };
 
 export default AlbumList;

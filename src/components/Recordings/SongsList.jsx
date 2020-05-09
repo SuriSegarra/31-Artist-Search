@@ -3,15 +3,16 @@ import Song from '../Recording/Song';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const SongList = ({ songs }) => {
+
+const SongList = ({ songs, match }) => {
   const songElement = songs.map(song => (
-    <Link key={song.id} to={`/song/${song.id}`}>
+    <Link key={song.id} to={`/lyrics/${match.params.artist}/${song.title}`}>
       <li>
         <Song {...song}/>
       </li>
     </Link>
-   
   ));
+
   return (
     <ul>
       {songElement}
@@ -24,7 +25,12 @@ SongList.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired
-  })).isRequired
+  })).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      artist: PropTypes.string.isRequired
+    })
+  }).isRequired
 };
 
 export default SongList;

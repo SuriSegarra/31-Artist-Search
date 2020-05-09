@@ -20,7 +20,8 @@ const ArtistsViewer = () => {
     <>
       <Search onChange={handleChange} onClick={handleClick}/>
       <Artists 
-        artists={artists}/>
+        artists={artists}
+        artistsName={search}/>
     </>
   );
 };

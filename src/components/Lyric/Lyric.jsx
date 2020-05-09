@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
-const Lyric = ({ id, artist, title, lyrics }) => {
-  return (
-    <Link key={id} to={`/lyrics/${id}`}>
-      <li>
-        <h2>{title} Lyrics</h2>
-        <p>By {artist}</p>
-        <pre>{lyrics}</pre>
-      </li>
-    </Link>
-  );
-};
+const Lyric = ({ lyrics, artist, title }) => (
+  <section> 
+    <h2>{title} lyrics</h2>
+    <p>By {artist}</p>
+    <pre>{lyrics}</pre>
+  </section>
+);
 
 Lyric.propTypes = {
   id: PropTypes.string.isRequired,

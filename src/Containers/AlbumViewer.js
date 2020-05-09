@@ -14,7 +14,7 @@ const AlbumViewer = ({ match }) => {
 
   return (
     <>
-      <Albums releases={albums}/>
+      <Albums releases={albums} artist={match.params.artist}/>
     </>
   );
 };
@@ -22,7 +22,8 @@ const AlbumViewer = ({ match }) => {
 AlbumViewer.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
-      id:PropTypes.string.isRequired
+      id:PropTypes.string.isRequired,
+      artist: PropTypes.string.isRequired
     }).isRequired
   }).isRequired
 };
