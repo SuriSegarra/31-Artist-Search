@@ -1,6 +1,24 @@
 .Search {
     
-    input{
-        width: 25%;
+    input[type='text'] {
+        width: 35%;
+        height: 30px;
+        display: block;
+        margin : 0 auto;
+        position: relative;
+        top: 250px;
+    }
+    input[placeholder='Find an artist'] {
+        font-size: 20px;
+        text-align: center;
+    }
+    button {
+        position: relative;
+    left: 70%;
+    top: 216px;
+    width: 72px;
+    height: 32px;
+    font-size: unset;
+
     }
 }
