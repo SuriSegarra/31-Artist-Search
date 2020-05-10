@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Lyric.css';
 
 const Lyric = ({ lyrics, artist, title }) => (
   <section> 
-    <h2>{title} lyrics</h2>
-    <p>By {artist}</p>
+    <h2>{title} Lyrics </h2>
+    <p> {artist}</p>
     <pre>{lyrics}</pre>
   </section>
 );

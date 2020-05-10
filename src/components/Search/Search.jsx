@@ -28,8 +28,11 @@ const Search = ({ name, onChange, onClick }) => {
       <h1> Artist<span> Search</span></h1>
   
       <h2>Browse all</h2>
+
       <input type='text' name={name} value={name} placeholder='Find an artist' onChange={onChange}/>
+
       <button onClick={onClick}>Search</button>
+
       <div className={styles.images}>
         <img src={latin} alt=''></img>
         <img src={hiphop} alt=''></img>
@@ -53,7 +56,7 @@ const Search = ({ name, onChange, onClick }) => {
     </div>
   
   );
-}
+};
 
 Search.propTypes = {
   name: PropTypes.string.isRequired,

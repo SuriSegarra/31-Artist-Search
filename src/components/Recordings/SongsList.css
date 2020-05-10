@@ -1,0 +1,15 @@
+p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+h1 {
+    text-align: center;
+}
+ul { 
+    border: 1px solid white;
+}
+.textlink {
+    color: inherit;
+    text-decoration: inherit;
+}
