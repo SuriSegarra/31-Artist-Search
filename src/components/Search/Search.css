@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+}
+.Search {
+
+    input[type='text'] {
+        width: 35%;
+        height: 30px;
+        display: block;
+        margin : 0 auto;
+        position: relative;
+    }
+
+    input[placeholder='Find an artist'] {
+        font-size: 20px;
+        text-align: center;
+    }
+    button {
+        position: relative;
+        left: 70%;
+        bottom: 34px;
+        width: 72px;
+        height: 32px;
+        font-size: unset;
+    }
+
+    h2 { 
+        position: relative;
+        top: 150px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    img {
+        width: 225px;
+        border-radius: 5%;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+    .images {
+        display: flex;
+        flex-wrap: wrap;
+        top: 150px;
+        position: relative;
+    } 
+    h1{
+        color: white;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'Montserrat';
+        font-size: 32px;
+        font-weight: 200;
+    }
+    h1 span{
+        font-weight: 800;
+    }
+}
